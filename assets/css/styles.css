@@ -18,7 +18,8 @@
   --lig: 75%;
   --second-hue: 219;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
+  /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
@@ -82,7 +83,8 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: 0.4s; /* for light mode animation */
+  transition: 0.4s;
+  /* for light mode animation */
 }
 
 h1,
@@ -183,6 +185,7 @@ body.light-theme {
 .light-theme::-webkit-scrollbar {
   background-color: hsl(var(--second-hue), 8%, 80%);
 }
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
@@ -279,11 +282,9 @@ body.light-theme {
 
 /* Active link */
 .active-link {
-  background: linear-gradient(
-    180deg,
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.5),
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
-  );
+  background: linear-gradient(180deg,
+      hsla(var(--first-hue), var(--sat), var(--lig), 0.5),
+      hsla(var(--first-hue), var(--sat), var(--lig), 0.2));
   box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), 0.4);
   border-radius: 5rem;
 
@@ -336,11 +337,9 @@ body.light-theme {
   justify-self: center;
   width: 190px;
   height: 293px;
-  background: linear-gradient(
-    180deg,
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.5),
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.1)
-  );
+  background: linear-gradient(180deg,
+      hsla(var(--first-hue), var(--sat), var(--lig), 0.5),
+      hsla(var(--first-hue), var(--sat), var(--lig), 0.1));
 
   border-radius: 10rem 10rem 1rem 1rem;
   display: flex;
@@ -537,6 +536,12 @@ body.light-theme {
   padding-top: 1rem;
 }
 
+.contact__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
 .services__card {
   background-color: var(--container-color);
   padding: 3rem 1.5rem 1.5em;
@@ -631,6 +636,7 @@ body.light-theme {
   color: var(--first-color);
   cursor: pointer;
 }
+
 /*Active modal*/
 
 .active-modal {
@@ -737,10 +743,6 @@ body.light-theme {
 }
 
 /*=============== CONTACT ===============*/
-.contact__container {
-  row-gap: 3rem;
-  padding-bottom: 3rem;
-}
 
 .contact__title {
   text-align: center;
@@ -838,8 +840,10 @@ body.light-theme {
 .contact__form-area textarea {
   resize: none;
 }
+
 /*=============== FOOTER ===============*/
 .footer {
+  margin-top: 2rem;
   background-color: var(--first-color);
 }
 
@@ -951,6 +955,11 @@ body.light-theme {
     justify-content: center;
   }
 
+  .contact__container {
+    grid-template-columns: 145px;
+    justify-content: center;
+  }
+
   .work__item {
     font-size: var(--small-font-size);
   }
@@ -1017,6 +1026,11 @@ body.light-theme {
     justify-content: center;
   }
 
+  .contact__container {
+    grid-template-columns: repeat(3, 177px);
+    justify-content: center;
+  }
+
   .services__modal-content {
     width: 500px;
     padding: 4.5rem 2.5rem 2.5rem;
@@ -1040,13 +1054,6 @@ body.light-theme {
     margin: auto;
   }
 
-  .contact__container {
-    display: grid;
-    grid-template-columns: 220px 340px;
-    column-gap: 2rem;
-    justify-content: center;
-  }
-
   .contact__info {
     grid-template-columns: 200px;
     gap: 1rem;
@@ -1055,31 +1062,7 @@ body.light-theme {
   .contact__form {
     width: 340px;
   }
-  /* .contact__info {
-    grid-template-columns: 350px;
-    justify-content: center;
-  }
-
-  .contact__form {
-    width: 360px;
-    margin: 0 auto;
-  } */
 }
-
-/* @media screen and (min-width: 767px) {
-  /* .work__container {
-    grid-template-columns: repeat(2, max-content);
-  } */
-
-/* .contact__info {
-    grid-template-columns: 300px;
-  }
-
-  .contact__container {
-    grid-template-columns: repeat(2, 325px);
-    justify-content: center;
-  }
-} */
 
 /* For large devices */
 @media screen and (min-width: 992px) {
@@ -1108,6 +1091,7 @@ body.light-theme {
   .home__img {
     width: 220px;
   }
+
   .home__social-link {
     padding: 0.4rem;
     font-size: 1.25rem;
@@ -1164,6 +1148,11 @@ body.light-theme {
     column-gap: 2rem;
   }
 
+  .contact__container {
+    grid-template-columns: repeat(3, 300px);
+    column-gap: 2rem;
+  }
+
   .services__card {
     padding: 5rem 2rem 1.5rem;
   }
@@ -1204,11 +1193,6 @@ body.light-theme {
 
   .contact__form-area {
     height: 18rem;
-  }
-
-  .contact__container {
-    grid-template-columns: repeat(2, 430px);
-    column-gap: 6rem;
   }
 
   .footer__social-link {

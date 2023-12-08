@@ -34,14 +34,14 @@ modalClose.forEach((mc) => {
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 
-let mixer = mixitup(".work__container", {
-  selectors: {
-    target: ".work__card",
-  },
-  animation: {
-    duration: 300,
-  },
-});
+// let mixer = mixitup(".work__container", {
+//   selectors: {
+//     target: ".work__card",
+//   },
+//   animation: {
+//     duration: 300,
+//   },
+// });
 
 /* Link active work */
 const workLinks = document.querySelectorAll(".work__item");
